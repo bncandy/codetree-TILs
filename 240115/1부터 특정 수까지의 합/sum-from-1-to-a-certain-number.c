@@ -18,6 +18,6 @@ int n;
 
 scanf("%d", &n);
 
-printf("%d", result / 10);
+printf("%d", summary(n) / 10);
     return 0;
 }

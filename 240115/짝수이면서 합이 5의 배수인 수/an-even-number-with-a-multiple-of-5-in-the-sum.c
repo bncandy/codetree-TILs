@@ -18,7 +18,7 @@ int is_five(int n){
         n /= 10;
     }
 
-    if (n % 5 != 0)
+    if (sum % 5 != 0)
         return 0;
     else 
         return 1;
@@ -36,6 +36,6 @@ int main() {
         printf("Yes");
     else
         printf("No");
-        
+
     return 0;
 }

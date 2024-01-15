@@ -26,7 +26,9 @@ int main() {
 
     int n;
 
-    if(is_yoon)
+    scanf("%d", &n);
+
+    if(is_yoon(n))
         printf("true");
     else   
         printf("false");

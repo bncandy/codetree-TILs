@@ -15,7 +15,7 @@ int is_yoon(int n){
     if (n % 400 == 0)
         temp3 = 1;
 
-    if(temp1 && (!temp2 || temp3))
+    if((!temp2 || temp3) && temp1)
         return 1;
     
     else return 0;

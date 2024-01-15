@@ -8,7 +8,7 @@ int is_tsn(int n) {
     while (n) {
 
         result = n % 10;
-        if (result % 3 == 0)
+        if (result % 3 == 0 && result != 0)
             p = 1;
         n /= 10;
 

@@ -8,7 +8,7 @@ void is_suyeol(int* a, int b, int* c, int d){
     for (i = 0; i < b; i++){
         if (a[i] == c[0]){
             cnt = 1;
-            for (j = 1; j < d; j++){
+            for (j = 1; j <= d; j++){
                 if(c[j] == a[i + j]){
                     cnt++;
                 }

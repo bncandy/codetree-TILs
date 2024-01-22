@@ -78,6 +78,7 @@ void print_result(int y, int m, int d){
                 break;
             case 3:
                 printf("Fall");
+                break;
             case 4:
                 printf("Winter");
 

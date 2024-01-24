@@ -24,8 +24,8 @@ int main() {
     scanf("%d %d", &a, &b);
 
     if (a > b)
-        printf("%d %d", smallsu(a, b), keunsu(a, b));
-    else 
         printf("%d %d", keunsu(a, b), smallsu(a, b));
+    else 
+        printf("%d %d", smallsu(a, b), keunsu(a, b));
     return 0;
 }

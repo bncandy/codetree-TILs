@@ -18,7 +18,7 @@ int main() {
 
         scanf("%d %d", &a1, &a2);
 
-        for (j = a1; j <= a2; j++)
+        for (j = a1 - 1; j <= a2 - 1; j++)
             cnt += input[j];
         printf("%d\n", cnt);
     }

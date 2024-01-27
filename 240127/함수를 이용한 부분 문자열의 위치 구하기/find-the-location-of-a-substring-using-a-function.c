@@ -22,7 +22,7 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    for (i = 0; i < strlen(input) - 1; i++){
+    for (i = 0; i < strlen(input); i++){
         if (s == input + i){
             printf("%d", i);
             break;

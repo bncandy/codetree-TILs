@@ -37,7 +37,7 @@ void isRight(char* input){
         element temp = { '\0', };
         temp.key = input[i];
         push(temp);
-        if (top != -1 && stack[top].key == ')'){
+        if (top > 0 && stack[top].key == ')'){
             pop();
             pop();
         }

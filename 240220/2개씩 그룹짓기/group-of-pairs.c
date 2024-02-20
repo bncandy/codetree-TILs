@@ -20,18 +20,27 @@ int main() {
 
     int n;
     int buff[2000] = { 0,};
+    int cmp[2000] = { 0, };
+    int result[2000] = { 0, };
     int i;
-    int result = 0;
 
     scanf("%d", &n);
 
-    for (i = 0; i < n; i++)
+    for (i = 0; i < 2 * n; i++)
         scanf("%d", &buff[i]);
     
-    s_sort(buff, n);
+    s_sort(buff, 2 * n);
 
-    result = buff[0] + buff[n - 1];
-    printf("%d", result);
+    for (i = 0; i < 2 * n; i++)
+        cmp[2 * n - i - 1] = buff[i];
+
+    for (i = 0; i < 2 * n; i++)
+        result[i] = buff[i] + cmp[i];
+    
+    s_sort(result, 2 * n);
+
+
+    printf("%d", result[2 * n - 1]);
     // 여기에 코드를 작성해주세요.
     return 0;
 }

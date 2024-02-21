@@ -1,22 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-void s_sort(char* input){
-    int i, j, n = strlen(input);
-    int min_index = 0;
-    char temp;
-
-    for (i = 0; i < n - 1; i++){
-        min_index = i;
-        for (j = i + 1; j < n; j++){
-            if (input[j] < input[min_index]){
-                min_index = j;
-            }
-        }
-        temp = input[i];
-        input[i] = input[min_index];
-        input[min_index] = temp;
-    }   
+int compare(const void *a, const void *b) {
+    return (*(char *)a - *(char *)b);
 }
 
 int main() {
@@ -27,8 +14,8 @@ int main() {
     scanf("%s", buff);
     scanf("%s", cmp);
 
-    s_sort(buff);
-    s_sort(cmp);
+    qsort(buff, strlen(buff), sizeof(char), compare);
+    qsort(cmp, strlen(cmp), sizeof(char), compare);
 
     if(!strcmp(buff, cmp) && strlen(buff) == strlen(cmp))
         printf("Yes");

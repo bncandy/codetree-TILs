@@ -30,7 +30,7 @@ int main() {
     s_sort(buff);
     s_sort(cmp);
 
-    if(!strcmp(buff, cmp))
+    if(!strcmp(buff, cmp) && strlen(buff) == strlen(cmp))
         printf("Yes");
     else printf("No");
     // 여기에 코드를 작성해주세요.

@@ -32,6 +32,31 @@ public class Main {
             p[min_index] = temp;
         }
 
+        for (i = 0; i < n - 1; i++){
+            Std temp;
+            min_index = i;
+            for (j = i + 1; j < n; j++){
+                if (p[j].eng < p[min_index].eng)
+                    min_index = j;
+            }
+            temp = p[i];
+            p[i] = p[min_index];
+            p[min_index] = temp;
+        }
+
+
+        for (i = 0; i < n - 1; i++){
+            Std temp;
+            min_index = i;
+            for (j = i + 1; j < n; j++){
+                if (p[j].mat < p[min_index].mat)
+                    min_index = j;
+            }
+            temp = p[i];
+            p[i] = p[min_index];
+            p[min_index] = temp;
+        }
+
         for (i = n - 1; i >= 0; i--){
             p[i].printStd();
         }

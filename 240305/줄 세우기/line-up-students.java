@@ -35,13 +35,11 @@ class Std implements Comparable<Std> {
     void printStd(){
         System.out.println(this.height + " " + this.weight + " " + this.num);
     }
-    public int compareTo(Std student){
-        if (this.height == student.height)
-            if (this.weight == student.weight)
-                return this.num - student.num;
-        return (this.height == student.height) ?
-                ((this.weight == student.weight)? 
-                this.num - student.num : this.weight - student.weight)
-                : this.height - student.height;
-    }
+    public int compareTo(Std student) {
+    if (this.height != student.height)
+        return this.height - student.height;
+    if (this.weight != student.weight)
+        return this.weight - student.weight;
+    return this.num - student.num;
+}
 }

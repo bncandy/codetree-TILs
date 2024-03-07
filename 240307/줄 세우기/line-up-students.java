@@ -16,7 +16,7 @@ public class Main {
             cnt++;
         }
         Arrays.sort(p);
-        for (i = 0 ; i < n; i++){
+        for (i = n - 1 ; i >= 0; i--){
             p[i].printStd();
         }
         // 여기에 코드를 작성해주세요.
@@ -40,6 +40,6 @@ class Std implements Comparable<Std> {
         return this.height - student.height;
     if (this.weight != student.weight)
         return this.weight - student.weight;
-    return this.num - student.num;
+    return student.num - this.num;
 }
 }
